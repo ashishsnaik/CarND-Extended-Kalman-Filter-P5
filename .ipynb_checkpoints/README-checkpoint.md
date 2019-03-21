@@ -1,4 +1,4 @@
-# **Sensor Fusion: Autonomous Vehicle Object-Tracking Using Extended Kalman Filter (EKF), in C++**
+# **Sensor Fusion: Autonomous Vehicle Object-Tracking Using Extended Kalman Filter (EKF) in C++**
 ---
 [![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
 
@@ -13,7 +13,7 @@
 [image8]: ./images/R_sim_output_dataset2.png "Radar Sim Output Dataset2"
 
 
-My goal in this project was to develope a Sensor Fusion module by implementating an **Extended Kalman Filter (EKF) algorithm in C++**, to track and predict a bicycle's position and velocity around a vehicle. The project accomplishes this by using a combination of Standard and Extended Kalman Filters to combine LIDAR and RADAR sensor data, in order to estimate the state of a moving object of interest with noisy lidar and radar measurements.
+My goal in this project was to develope a Sensor Fusion module by implementing an **Extended Kalman Filter (EKF) algorithm in C++**, to track and predict a bicycle's position and velocity around a vehicle. The project accomplishes this by using a combination of Standard and Extended Kalman Filters to combine LIDAR and RADAR sensor data, in order to estimate the state of a moving object of interest with noisy lidar and radar measurements.
 
 The LIDAR and RADAR data are provided as inputs by a Udacity Simulator, which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases). The communication between the Simulator (Client) and the Sensor Fusion Module (Server) happens using [uWebSocketIO](https://github.com/uWebSockets/uWebSockets).
 
@@ -32,9 +32,10 @@ I evaluated state-prediction performance on two datasets, using Root Mean Square
 ## **Project Overview**
 ---
 
-*Kindly note that this project is developed keeping in mind the Udacity Project Instructions and [Rubric](https://review.udacity.com/#!/rubrics/748/view).*
+**Kindly note that this project is developed keeping in mind the Udacity Project Instructions and [Rubric](https://review.udacity.com/#!/rubrics/748/view).*
 
-The developed Sensor Fusion module consists of the below main components:
+### **Source Code**
+The source code for the project can be found under the [src/](src/) folder. The developed Sensor Fusion module consists of the below main components:
 1. FusionEKF (FusionEKF.h, FusionEKF.cpp)
 
 	Handles the fusion by setting the appropriate state and process variables, based on whether the incoming data are from lidar or radar sensor, and uses the KalmanFilter component to estimate object state and update the measurements.
@@ -106,7 +107,7 @@ Dataset #1 | Dataset #2
 :---------:|:----------:
 ![][image3]|![][image4]
 
-**RMSE** (also seen in the output image, above)
+**RMSE** (also seen in the above output images)
 
 | Object State Variable  | Dataset #1 (RMSE) 		| Dataset #2 (RMSE)|
 |:----------------:|:---------------------:|:-------------:| 
@@ -125,7 +126,7 @@ Lidar Only | Radar Only
 :---------:|:----------:
 ![][image5]|![][image6]
 
-**RMSE on Dataset #1** (also seen in the output image, above)
+**RMSE on Dataset #1** (also seen in the above output images)
 
 | Object State Variable  | Lidar Only (RMSE) 		| Radar Only (RMSE)|
 |:----------------:|:---------------------:|:-------------:| 
@@ -140,7 +141,7 @@ Lidar Only | Radar Only
 :---------:|:----------:
 ![][image7]|![][image8]
 
-**RMSE on Dataset #2** (also seen in the output image, above)
+**RMSE on Dataset #2** (also seen in the above output images)
 
 | Object State Variable  | Lidar Only (RMSE) 		| Radar Only (RMSE)|
 |:----------------:|:---------------------:|:-------------:| 

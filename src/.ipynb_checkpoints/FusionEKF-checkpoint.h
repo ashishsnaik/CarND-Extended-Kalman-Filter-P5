@@ -9,9 +9,6 @@
 #include "measurement_package.h"
 #include "tools.h"
 
-/**
- * Implementation of the sensor fusion functionality
- */
 class FusionEKF {
  public:
   /**
