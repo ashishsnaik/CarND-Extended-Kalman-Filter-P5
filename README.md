@@ -13,9 +13,9 @@
 [image8]: ./images/R_sim_output_dataset2.png "Radar Sim Output Dataset2"
 
 
-My goal in this project was to develope a Sensor Fusion module by implementing an **Extended Kalman Filter (EKF) algorithm in C++**, to track and predict a bicycle's position and velocity around a vehicle. The project accomplishes this by using a combination of Standard and Extended Kalman Filters to combine LIDAR and RADAR sensor data, in order to estimate the state of a moving object of interest with noisy lidar and radar measurements.
+My goal in this project was to develop a Sensor Fusion module by implementing an **Extended Kalman Filter (EKF) algorithm in C++** to track and predict a bicycle's position and velocity around a vehicle. The project accomplishes this by using a combination of Standard and Extended Kalman Filters to combine LIDAR and RADAR sensor data in order to estimate the state of a moving "object of interest" with noisy lidar and radar measurements.
 
-The LIDAR and RADAR data are provided as inputs by a Udacity Simulator, which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases). The communication between the Simulator (Client) and the Sensor Fusion Module (Server) happens using [uWebSocketIO](https://github.com/uWebSockets/uWebSockets).
+The lidar and radar data are provided as inputs by a Udacity Simulator, which can be downloaded [here](https://github.com/udacity/self-driving-car-sim/releases). The communication between the Simulator (Client) and the Sensor Fusion Module (Server) happens using [uWebSocketIO](https://github.com/uWebSockets/uWebSockets).
 
 I evaluated state-prediction performance on two datasets, using Root Mean Squared Error (RMSE) on the accumulated error residuals between my object state estimate and the ground truth. Below are the final performance results:
 
@@ -118,7 +118,7 @@ Dataset #1 | Dataset #2
 
 ### **LIDAR Vs. RADAR Performance**
 ---
-I also ran a quick performance comparision with using only LIDAR and only RADAR measurements on both the datasets. Below are the simulation outputs and RMSEs: 
+I also ran a quick performance comparision with using only lidar and only radar measurements on both the datasets. Below are the simulation outputs and RMSEs: 
 
 **Simulator Output - Dataset #1**
 
@@ -150,6 +150,6 @@ Lidar Only | Radar Only
 | x-velocity (vx) | 0.6566 	|	0.6422	|
 | y-velocity (vy) | 0.5001 	|	0.7739	|
 
-We can see in the comparisions above that, due to better spatial resolution than that of a RADAR, the LIDAR tracking shows lower RMSEs for x-position (px) and y-position (py).
+We can see in the comparisions above that, due to better spatial resolution than that of a radar, the lidar tracking shows lower RMSEs for x-position (px) and y-position (py).
 
-Though, as seen in the previous `Sensor Fusion - Final Output` section, Sensor Fusion, which uses both LIDAR and RADAR measurements, shows much better tracking accuracy than the individual sensors.
+Though, as seen in the previous `Sensor Fusion - Final Output` section, Sensor Fusion, which uses both lidar and radar measurements, shows much better tracking accuracy than the individual sensors.
